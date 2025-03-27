@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
   <title>דף הצטרפות</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -34,6 +34,12 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <style>
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+    
     body {
       font-family: 'Heebo', sans-serif;
       background-color: #F1F5F9;
@@ -43,7 +49,6 @@
         radial-gradient(at 15% 75%, hsl(220, 90%, 98%) 0, transparent 45%),
         radial-gradient(at 65% 15%, hsl(210, 95%, 97%) 0, transparent 40%);
       position: relative;
-      overflow-x: hidden;
     }
     
     /* Decorative background elements */
@@ -286,6 +291,25 @@
     .icon-bounce:hover i {
       animation: bounce 1s ease;
     }
+
+    .glass, .glass-dark, .card {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: 420px) {
+      .p-6 {
+        padding: 1rem !important;
+      }
+      .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .card {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -339,13 +363,13 @@
   </section>
 
   <!-- Groups Section -->
-  <section id="groups" class="w-full max-w-6xl mx-auto mb-16">
+  <section id="groups" class="w-full max-w-6xl mx-auto mb-16 px-2">
     <div class="text-center mb-12" data-aos="fade-up">
       <span class="text-primary font-semibold text-lg bg-primary/10 py-2 px-4 rounded-full">הקבוצות שלנו</span>
       <h2 class="text-3xl md:text-4xl font-bold text-dark mt-4 gradient-text">בחרו את הקבוצה המתאימה לכם</h2>
     </div>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8" data-aos="fade-up" data-aos-delay="100">
 
       <!-- Card 1 -->
       <div class="card p-6 text-center relative" style="--highlight-start: #2563EB; --highlight-end: #0EA5E9;">
