@@ -51,6 +51,54 @@
       position: relative;
     }
     
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .glass, .glass-dark {
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(100% - 2rem);
+    }
+
+    .card {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+
+      .glass, .glass-dark {
+        width: calc(100% - 1.5rem);
+      }
+
+      .p-6 {
+        padding: 1rem !important;
+      }
+
+      .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+    }
+
+    @media (min-width: 421px) {
+      .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+    
     /* Decorative background elements */
     body::before {
       content: '';
@@ -291,32 +339,13 @@
     .icon-bounce:hover i {
       animation: bounce 1s ease;
     }
-
-    .glass, .glass-dark, .card {
-      max-width: 100%;
-      width: 100%;
-    }
-
-    @media (max-width: 420px) {
-      .p-6 {
-        padding: 1rem !important;
-      }
-      .px-6 {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-      }
-      .card {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-      }
-    }
   </style>
 </head>
 
 <body class="min-h-screen p-1 xs:p-2 sm:p-3 md:p-6 lg:p-8 overflow-x-hidden">
   
   <!-- Header with navigation -->
-  <header class="w-full max-w-5xl mx-auto glass rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-6 sm:mb-8 md:mb-12 sticky top-2 md:top-4 z-50">
+  <header class="container glass rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-6 sm:mb-8 md:mb-12 sticky top-2 md:top-4 z-50">
     <nav class="flex justify-center items-center">
       <div class="flex items-center">
         <div class="logo-container">
@@ -328,7 +357,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="w-full max-w-6xl mx-auto mb-16">
+  <section class="container mb-16">
     <div class="glass-dark rounded-3xl p-10 md:p-16 text-center relative overflow-hidden" data-aos="fade-up">
       <!-- Abstract shapes in background -->
       <div class="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -mr-20 -mt-20"></div>
@@ -363,7 +392,7 @@
   </section>
 
   <!-- Groups Section -->
-  <section id="groups" class="w-full max-w-6xl mx-auto mb-16 px-2">
+  <section id="groups" class="container mb-16">
     <div class="text-center mb-12" data-aos="fade-up">
       <span class="text-primary font-semibold text-lg bg-primary/10 py-2 px-4 rounded-full">הקבוצות שלנו</span>
       <h2 class="text-3xl md:text-4xl font-bold text-dark mt-4 gradient-text">בחרו את הקבוצה המתאימה לכם</h2>
@@ -427,7 +456,7 @@
   </section>
 
   <!-- Benefits Section -->
-  <section id="benefits" class="w-full max-w-6xl mx-auto mb-16">
+  <section id="benefits" class="container mb-16">
     <div class="glass rounded-3xl p-10 relative overflow-hidden" data-aos="fade-up">
       <!-- Abstract shapes in background -->
       <div class="absolute top-0 right-0 w-56 h-56 bg-primary/5 rounded-full -mr-20 -mt-20"></div>
@@ -477,7 +506,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="w-full max-w-6xl mx-auto glass-dark rounded-t-2xl sm:rounded-t-3xl p-6 sm:p-8 text-center relative overflow-hidden">
+  <footer class="container glass-dark rounded-t-2xl sm:rounded-t-3xl p-6 sm:p-8 text-center relative overflow-hidden">
     <!-- Abstract shapes in background -->
     <div class="absolute top-0 right-0 w-40 sm:w-56 h-40 sm:h-56 bg-white/5 rounded-full -mr-20 -mt-20"></div>
     <div class="absolute bottom-0 left-0 w-32 sm:w-40 h-32 sm:h-40 bg-white/5 rounded-full -ml-10 -mb-10"></div>
